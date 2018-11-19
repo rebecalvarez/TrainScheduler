@@ -1,0 +1,17 @@
+/* th {
+    font-weight: bold;
+} */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.head {
+    padding-bottom: 20px;
+}
+.now-time{
+    font-size: 15px;
+}
+
+.new-train-head {
+    background-color: rgb(40, 129, 129);
+}

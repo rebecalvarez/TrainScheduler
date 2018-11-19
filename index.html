@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg="
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <title>Train Scheduler</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron bg-dark text-white head">
+      <h1 class="text-center" id="heading">RD Train Services</h1>
+      <h2 class="text-center" id="subHeading">Catch a Rail on Time</h2>
+      <p class="pull-right  text-right now-time" id="currentTime"></p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-3">
+        <div class="panel panel-default">
+          <div class="panel-heading new-train-head">
+            <h3 class="panel-title text-center">Add New Train</h3>
+            <div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <label>Train Name</label>
+                    <input type="text" class="form-control form-field" id="train-name">
+                  </div>
+                  <div class="form-group">
+                    <label>Destination</label>
+                    <input type="text" class="form-control form-field" id="destination">
+                  </div>
+                  <div class="form-group">
+                    <label>First Train Time:<span> <br>HH:mm - military time</span> </label>
+                    
+                    <input type="text" class="form-control form-field" id="first-train" value="">
+                  </div>
+                  <div class="form-group">
+                    <label>Frequency (mins)</label>
+                    <input type="text" class="form-control form-field" id="frequency" value="">
+                  </div>
+
+                  <button type="submit" class="btn btn-default" id="submit">Add Train</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title text-center">Train Schedule</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-hover" id="train-table">
+              <thead>
+                <tr>
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th class="text-center">Frequency</th>
+                  <th class="text-center">Next Arrival</th>
+                  <th class="text-center">Minutes Away</th>
+                  <th class="text-center">Remove</th>
+                </tr>
+              </thead>
+              <tbody id="train-table-rows">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</body>
+
+<script type="text/javascript" src="assets/javascript/train.js"></script>
+
+</html>
