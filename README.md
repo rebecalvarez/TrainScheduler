@@ -1,4 +1,4 @@
-# github.io-TrainScheduler
+# Train Scheduler
 
 
 [Train Schedule Link](https://rebecalvarez.github.io/github.io-TrainScheduler/ "Train-Schedule Link")
