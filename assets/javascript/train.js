@@ -83,12 +83,12 @@ database.ref().on("child_added", function(childSnapshot){
    
 
    var newrow = $("<tr>");
-   newrow.append($("<td>" + childSnapshot.val().trainName + "</td>"));
-   newrow.append($("<td>" + childSnapshot.val().destination + "</td>"));
-   newrow.append($("<td class='center-text'>" + childSnapshot.val().frequency + "</td>"));
-   newrow.append($("<td class='center-text'>" + moment(nextTrain).format("LT") + "</td>"));
-   newrow.append($("<td class='center-text'>" + minToArrival + "</td>"));
-   newrow.append($("<td class='center-text'><button class='arrival btn btn-danger btn-xs' data-key='" + key + "'>X</button></td>"));
+   newrow.append($("<td > " + childSnapshot.val().trainName + "</td>"));
+   newrow.append($("<td > " + childSnapshot.val().destination + "</td>"));
+   newrow.append($("<td class='text-center'> " + childSnapshot.val().frequency + "</td>"));
+   newrow.append($("<td class='text-center'> " + moment(nextTrain).format("LT") + "</td>"));
+   newrow.append($("<td class='text-center'> " + minToArrival + "</td>"));
+   newrow.append($("<td class='text-center'><button class='arrival btn btn-danger btn-xs' data-key='" + key + "'>X</button></td>"));
 
    if (minToArrival < 6){
      newrow.addClass("info");

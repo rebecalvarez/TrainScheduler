@@ -10,7 +10,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
@@ -22,18 +22,20 @@
 
 <body>
   <div class="container">
-    <div class="jumbotron bg-dark text-white head">
+    <div class="jumbotron text-white head">
       <h1 class="text-center" id="heading">RD Train Services</h1>
-      <h2 class="text-center" id="subHeading">Catch a Rail on Time</h2>
+      <h3 class="text-center font-italic" id="subHeading">Catch a Rail on Time</h3>
       <p class="pull-right  text-right now-time" id="currentTime"></p>
     </div>
 
     <div class="row">
 
-      <div class="col-xs-12 col-sm-3">
+      <div class="col-xs-12 col-sm-3 new-train-head">
         <div class="panel panel-default">
-          <div class="panel-heading new-train-head">
-            <h3 class="panel-title text-center">Add New Train</h3>
+          <div class="panel-heading ">
+            <div class="title">
+              <h4 class="panel-title text-center">Add New Train</h4>
+            </div>
             <div>
               <div class="panel-body">
                 <form>
@@ -46,16 +48,17 @@
                     <input type="text" class="form-control form-field" id="destination">
                   </div>
                   <div class="form-group">
-                    <label>First Train Time:<span> <br>HH:mm - military time</span> </label>
-                    
+                    <label>First Train Time:<span class="mini-label"> <br>(HH:mm - military time)</span> </label>
+
                     <input type="text" class="form-control form-field" id="first-train" value="">
                   </div>
                   <div class="form-group">
-                    <label>Frequency (mins)</label>
+                    <label>Frequency <span class="mini-label"> <br>(Minutes)</span></label>
                     <input type="text" class="form-control form-field" id="frequency" value="">
                   </div>
-
-                  <button type="submit" class="btn btn-default" id="submit">Add Train</button>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-default add-train-button text-center" id="submit">Add Train</button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -63,21 +66,23 @@
         </div>
       </div>
 
-      <div class="col-xs-12 col-sm-9">
+      <div class="col-xs-12 col-sm-1"></div>
+
+      <div class="col-xs-12 col-sm-8 train-info">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title text-center">Train Schedule</h3>
+            <h3 class="panel-title text-center dark-bg title-schedule">Train Schedule</h3>
           </div>
           <div class="panel-body">
             <table class="table table-hover" id="train-table">
               <thead>
                 <tr>
-                  <th>Train Name</th>
-                  <th>Destination</th>
-                  <th class="text-center">Frequency</th>
-                  <th class="text-center">Next Arrival</th>
-                  <th class="text-center">Minutes Away</th>
-                  <th class="text-center">Remove</th>
+                  <th class="subtitle-schedule">Train Name</th>
+                  <th class="subtitle-schedule">Destination</th>
+                  <th class="text-center subtitle-schedule">Frequency</th>
+                  <th class="text-center subtitle-schedule">Next Arrival</th>
+                  <th class="text-center subtitle-schedule">Minutes Away</th>
+                  <th class="text-center subtitle-schedule">Remove</th>
                 </tr>
               </thead>
               <tbody id="train-table-rows">
