@@ -8,4 +8,4 @@ Accepts user input to add new train name, start time and frequency to schedule. 
 
 ## Sample View
 
-![Train Schedule App Screenshot](/assets/images/screenshot.png/)
+![Train Schedule App Screenshot](assets/images/screenshot.png/)
